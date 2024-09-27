@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FWB-Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(72, 104, 218);
+        }
+        img {
+            width: 1525px;
+            height: 825px;
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            width: 100%;
+            max-width: 1535px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .gradient {
+            position: absolute;
+            top: 170px;
+            left: 375px;
+            width: 775px;
+            height: 500px;
+        }
+        .loginwelcome {
+            position: absolute;
+            top: 200px;
+            left: 835px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+        }
+        .logindonthaveanaccount {
+            position: absolute;
+            top: 490px;
+            left: 875px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .loginrememberme {
+            position: absolute;
+            top: 590px;
+            left: 450px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(5, 1, 1);
+            text-align: center;
+            font-size: smaller;
+        }
+        .loginrememberme input {
+            position: relative;
+            top: -2px;
+            left:10px;
+            margin-right:0;
+        }
+        .loginforgotpass {
+            position: absolute;
+            top: 590px;
+            left: 590px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(2, 0, 0);
+            text-align: center;
+            font-size: smaller;
+        }
+        .loginusername {
+            position: absolute;
+            top: 250px;
+            left: 500px;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: larger;
+        }
+        .loginusernamefield {
+            position: absolute;
+            top: 305px;
+            left: 420px;
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .loginpassword {
+            position: absolute;
+            top: 350px;
+            left: 500px;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(4, 1, 1);
+            text-align: center;
+            font-size: larger;
+        }
+        .loginpasswordfield {
+            position: absolute;
+            top: 405px;
+            left: 420px;
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .googlex {
+            position: absolute;
+            top: 470px;
+            left: 475px;
+            width: 90px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .facebooktele {
+            position: absolute;
+            top: 470px;
+            left: 590px;
+            width: 80px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo {
+            position: absolute;
+            top: 170px;
+            left: 380px;
+            width: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .round-edged-rectangle-button {
+            position: absolute;
+            top: 545px;
+            left: 870px;
+            padding: 10px 50px;
+            font-size: 25px;
+            color: white;
+            background-color: rgba(101, 98, 188, 0.326);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        .round-edged-rectangle-button:hover {
+            background-color: #023f8e00;
+            transform: scale(1.025);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.715);
+        }
+        .round-edged-signup {
+            position: absolute;
+            top: 545px;
+            left: 425px;
+            padding: 10px 100px;
+            font-size: 25px;
+            color: white;
+            background-color: rgba(101, 98, 188, 0.326);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            font-family: 'Times New Roman', Times, serif;
+            background-image: linear-gradient(to right, #010406, #1c2391);
+            font-weight: bold;
+        }
+        .round-edged-signup:hover {
+            background-color: #023f8e00;
+            transform: scale(1.025);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.715);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <img src="SignUp Background.jpg" alt="Make Belief!">
+        <img src="White Blue.jpg" alt="Make Belief!" class="gradient">
+    </div>
+    <div class="loginwelcome">
+        <h1>Welcome<br>to<br>Login!</h1>
+    </div>
+    <div class="logindonthaveanaccount">
+        <h4>Don't have an account?</h4>
+    </div>
+    <div class="loginrememberme">
+        <input type="checkbox" id="rememberMeCheckbox">
+        <h4>Remember me</h4>
+    </div>
+    <div class="loginforgotpass">
+        <h4>Forgot Password?</h4>
+    </div>
+
+    <!-- Updated form with IDs for email and password fields -->
+    <form id="loginForm" action="/login" method="POST">
+        <div class="loginusername">
+            <h3>USERNAME</h3>
+        </div>
+        <input type="text" class="loginusernamefield" id="email" placeholder="Enter your email">
+        
+        <div class="loginpassword">
+            <h3>PASSWORD</h3>
+        </div>
+        <input type="password" class="loginpasswordfield" id="password" placeholder="Enter your password">
+
+        <!-- Buttons for login and signup -->
+        <button type="submit" class="round-edged-signup">Sign In</button>
+    </form>
+
+    <div class="facebooktele">
+        <img src="F and Tele.jpg" alt="Image 1">
+    </div>
+    <div class="googlex">
+        <img src="G and X.jpg" alt="Image 1">
+    </div>
+    <div class="logo">
+        <img src="Brick White.jpg" alt="Image 1">
+    </div>
+
+    <!-- JavaScript inclusion -->
+    <script src="login.js"></script>
+</body>
+</html>

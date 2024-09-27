@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fourth Wall Breaking.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+        }
+        img {
+            width: 1525px;
+            height: 825px;
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            width: 100%;
+            max-width: 1535px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .logo {
+            position: absolute;
+            top: 19px;
+            left: 10px;
+            width: 75px;
+            height: auto;
+        }
+        .login {
+            position: absolute;
+            top: 43px;
+            left: 1100px;
+            width: 15px;
+            height: auto;
+        }
+        .buttonhome {
+            position: absolute;
+            top: 45px;
+            left: 550px;
+            margin-top: 0;
+            padding: 0;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.305);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-out;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .buttonfilms {
+            position: absolute;
+            top: 45px;
+            left: 650px;
+            margin-top: 0;
+            padding: 0;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.305);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-out;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 70px; 
+            left: 650px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            z-index: 3;
+
+        }
+        .dropdown a {
+            display: block;
+            padding: 20px;
+            color: white;
+            text-decoration: wavy;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }   
+        .dropdown a:hover {
+            background-color: rgba(255, 255, 255, 0.168);
+        }
+        .buttonfilms:hover + .dropdown,
+        .dropdown:hover {
+            display: block;
+            transform: scale3d(1.02);
+        }
+        .buttontunes {
+            position: absolute;
+            top: 45px;
+            left: 750px;
+            margin-top: 0;
+            padding: 0;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.305);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-out;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .buttonfifthw {
+            position: absolute;
+            top: 45px;
+            left: 850px;
+            margin-top: 0;
+            padding: 0;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.305);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-out;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .buttonstar {
+            position: absolute;
+            top: 45px;
+            left: 950px;
+            margin-top: 0;
+            padding: 0;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.305);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-out;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .buttonlogin {
+            position: absolute;
+            top: 45px;
+            left: 1050px;
+            margin-top: 0;
+            padding: 0;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.305);
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-out;
+            font-family: Arial, Helvetica, sans-serif;
+            z-index: 1;
+            font-weight: bold;
+        }
+        .buttonhome:hover, .buttonfilms:hover, .buttontunes:hover, .buttonstar:hover, .buttonlogin:hover, .buttonfifthw:hover {
+            background-color: #00000000;
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.682);
+        }
+        .round-edged-rectangle-button {
+            position: absolute;
+            top: 545px;
+            left: 200px;
+            padding: 15px 30px;
+            font-size: 25px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.305);
+            border: none;
+            border-radius: 20px; /* Adjust border-radius for rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, #010406, #1c2391);
+            font-weight: bold;
+        }
+        .round-edged-rectangle-button:hover {
+            background-color: #023f8e00;
+            transform: scale(1.025);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.715);
+        }
+        .contentfwb {
+            position: absolute;
+            top: 25px;
+            left: 75px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+            text-align: left;
+        }
+        .contentwelcome {
+            position: absolute;
+            top: 210px;
+            left: 200px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            text-align: left;
+        }
+        .contentheading {
+            position: absolute;
+            top: 220px;
+            left: 200px;
+            font-size: 34px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: left;
+        }
+        .contenttagline {
+            position: absolute;
+            top: 480px;
+            left: 200px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Brick Black.jpg" alt="Make Belief!" class="logo">
+        <img src="Login.jpg" alt="Make Belief!" class="login">
+        <img src="FWB.jpg" alt="Make Belief!">
+        <button class="buttonhome">Home</button>
+        <button class="buttonfilms">Films</button>
+        <div class="dropdown">
+            <a href="#">Directors</a>
+            <a href="#">Actors</a>
+            <a href="#">Movies</a>
+            <a href="#">Reviews</a>
+            <a href="#">Ratings</a>
+        </div>
+        <button class="buttontunes">Tunes</button>
+        <button class="buttonfifthw">Fifth Wall</button>
+        <button class="buttonstar">Star</button>
+        <a href="Login.html">
+            <button class="buttonlogin">Login</button>
+        </a>
+        <a href="Sign Up.html">
+            <button class="round-edged-rectangle-button">Let's Break the Fourth Wall Together!--></button>
+        </a>
+        <div class="contentheading">
+            <h1 align: left>FOURTH<br> WALL<br> BREAKING!<br></h1>
+        </div>
+        <div class="contentfwb">
+            <h3>4th Wall Breaking</h3>
+        </div>
+        <div class="contenttagline">
+            <h2>where the line between the screen and the audience disappears.</h2>
+        </div>
+        <div class="contentwelcome">
+            <h2>Welcome to the</h2>
+        </div>
+    </div>
+</body>
+</html>

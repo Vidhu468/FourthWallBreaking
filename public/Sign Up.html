@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWB-Sign In</title>
+    <style>
+        /* Your existing styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(72, 104, 218);
+        }
+        img {
+            width: 1500px;
+            height: 800px;
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            width: 90%;
+            max-width: 1535px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .round-edged-rectangle-button {
+            position: absolute;
+            top: 650px;
+            left: 455px;
+            padding: 10px 200px;
+            font-size: 25px;
+            color: white;
+            background-color: rgba(101, 98, 188, 0.655);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        .round-edged-rectangle-button:hover {
+            background-color: #023f8e00;
+            transform: scale(1.025);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.715);
+        }
+        .facebook, .twitter {
+            position: absolute;
+            top: 205px;
+            padding: 10px 40px;
+            font-size: 25px;
+            color: white;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .facebook {
+            left: 385px;
+            background-color: rgba(0, 16, 247, 0.655);
+        }
+        .twitter {
+            left: 740px;
+            background-color: rgb(76, 158, 235);
+        }
+        .input-field {
+            position: absolute;
+            width: 335px;
+            padding: 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .first-name {
+            top: 330px;
+            left: 385px;
+        }
+        .last-name {
+            top: 330px;
+            left: 725px;
+        }
+        .email {
+            top: 400px;
+            left: 385px;
+            width: 670px;
+        }
+        .password {
+            top: 470px;
+            left: 385px;
+            width: 670px;
+        }
+        .terms {
+            position: absolute;
+            top: 550px;
+            left: 515px;
+            font-size: 14px;
+            color: #ffffff;
+            font-size: medium;
+        }
+        .oroption {
+            position: absolute;
+            top: 255px;
+            left: 700px;
+            font-size: 14px;
+            color: #ffffff;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Signup Bg.jpg" alt="Make Belief!">
+    </div>
+    <form id="signup-form" action="/register" method="POST">
+        <input type="text" class="input-field first-name" id="first-name" name="firstname" placeholder="Enter First Name" required>
+        <input type="text" class="input-field last-name" id="last-name" name="lastname" placeholder="Enter Last Name" required>
+        <input type="email" class="input-field email" id="email" name="email" placeholder="Enter E-mail address" required>
+        <input type="password" class="input-field password" id="password" name="password" placeholder="Create a new Password" required>
+        <button type="submit" class="round-edged-rectangle-button">Create Account</button>
+        <button class="facebook" type="button">Connect with Facebook</button>
+        <button class="twitter" type="button">Connect with Twitter</button>
+        <p class="terms">By clicking 'Create Account' you agree to our <a href="#">Terms and Conditions</a>.</p>
+    </form>
+    <div class="oroption">
+        <h4>or sign up with</h4>
+    </div>
+    <div id="result"></div>
+    <script src="register.js"></script>
+</body>
+</html>
